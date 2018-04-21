@@ -1,0 +1,16 @@
+<p>
+  <strong>firstname:</strong>
+  <%= @post.firstname %>
+</p>
+ 
+<p>
+  <strong>lastname:</strong>
+  <%= @post.lastname %>
+</p>
+
+<p>
+  <strong>pin_code:</strong>
+  <%= @post.pin_code %>
+</p>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

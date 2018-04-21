@@ -1,0 +1,32 @@
+<div  class="col-md-12 body">
+  <h1 class="post">Listing posts</h1>
+  <div class="linkpost">
+    <%= link_to 'New post', new_post_path ,class: 'btn btn-primary'%>
+  </div>
+  <% @posts.each do |post| %>
+  
+  <div class="col-sm-3">
+   <b> <p class="fnameenter">Firstname</p></b>
+      <%= post.firstname%>
+  </div>
+    <div class="col-sm-3"> 
+      <b><p class="lnameenter">Lastname</p></b>
+      <%= post.lastname %>
+    </div>
+    <div class="col-sm-3">
+     <b> <p class="pincodeenter">Pin_code</p></b>
+       <%= post.pin_code%>
+    </div>
+  <div class=" col-sm-3 link">
+      <%= link_to 'Show', post_path(post),class: 'btn btn-primary' %>
+      <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-primary'%>
+      <%= link_to 'Destroy', post_path(post),class: 'btn btn-primary',
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %>
+  
+  <% end %>
+  </div>
+   
+  
+  </div>
+  

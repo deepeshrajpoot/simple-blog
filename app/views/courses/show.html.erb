@@ -1,0 +1,17 @@
+<p>
+  <strong>first_name:</strong>
+  <%= @course.first_name %>
+</p>
+ 
+<p>
+  <strong>last_name:</strong>
+  <%= @course.last_name %>
+</p>
+
+<p>
+  <strong>address:</strong>
+  <%= @course.address %>
+</p>
+
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Back', courses_path %>
